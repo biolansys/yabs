@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>biolansys YABS </title>
+<meta charset="utf-8"/>
+<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="css/coolMenu.css" rel="stylesheet" type="text/css" media="screen"/>
+<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+<SCRIPT language=JavaScript> 
+function BrowseClick(){
+  document.forms[0].action="seqv0020.php";
+  document.forms[0]['userfile'].click();
+  return false;
+}
+
+function BrowseClick0(){
+  document.forms[0].action="seqv0021.php";
+  document.forms[0]['userfile'].click();
+  return false;
+}
+
+function Cargar(){
+ document.forms[0]['enviar'].click();
+ return false;
+}
+</SCRIPT> 
+
+</head>
+ <BODY  topmargin="0" leftmargin="4" rightmargin=0>
+<table border=0 CELLSPACING=0 CELLPADDING=5 width=100% height=100%>
+<tr heoght=1%><td height=10>
+		<ul id="coolMenu">
+		  <li><a href="#">Ensembl REST</a>
+          <ul class="noJS">
+				  	<li><a href="http://rest.ensembl.org/" target="f001"  >Info</a></li>
+						<li><a href="rest007.php" target="f001"  >Species</a></li>
+						<li><a href="rest008.php" target="f001"  >Compara</a></li>
+						<li><a href="rest005.php" target="f001"  >Gen/Align</a></li>
+						<li><a href="rest003.php" target="f001"  >GT/id</a></li>
+						<li><a href="rest004.php" target="f001"  >GT/symb</a></li>
+						<li><a href="rest010.php" target="f001"  >Homology/ID</a></li>
+						<li><a href="rest011.php" target="f001"  >Ext/Refs/ID</a></li>
+						<li><a href="rest012.php" target="f001"  >Inf/Ext/DL</a></li>
+						<li><a href="rest013.php" target="f001"  >Features/Region</a></li>
+						<li><a href="rest014.php" target="f001"  >Lookup/ID</a></li>
+						<li><a href="rest001.php" target="f001"  >Seq/id</a></li>
+						<li><a href="rest002.php" target="f001"  >Seq/region</a></li>
+				</ul>
+      </li>
+		
+		
+			<li><a href="#">File</a>
+          <ul class="noJS">
+					<li><a href="#" onclick="BrowseClick()" >Load DNA</a></li>
+					<li><a href="#" onclick="BrowseClick0()">Load Protein</a></li>
+				</ul>
+      </li>
+      
+      <li><a href="rest/" target=_blank>YABS</a></li>
+      
+			<li><a href="biophp/" target=_blank>biophp</a></li>
+			
+			<li><a href="#" onclick='window.alert("biolansys YABS : \n Sequence Editor");'>About</a></li>
+		</ul>
+	
+
+<form id="form0" style="visibility: hidden;" enctype="multipart/form-data" action="seqv0020.php" method="post" target="f001">
+      <input id="userfile" name="userfile" type="file" onchange="Cargar()">
+      <input type="submit" id="enviar" name="enviar" value="Enviar">
+</form>
+</td></tr>
+<tr>
+ <td valign=top>
+ 
+ <iframe name=f001 src='centro000.php' width=100% height=100% scrolling="auto" frameborder=0> </iframe>
+</td></tr>
+
+
+</table>
+
+ 
+ 
+</body>
+</html>
